@@ -1,0 +1,388 @@
+:root {
+    --start-color: blue;
+    --end-color: red;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #212121;
+    margin: 0px;
+}
+
+.tile-set {
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.tile {
+    padding: 10px;
+    text-align: center;
+    border: 2px dashed #2a2a2a;
+    border-radius: 4px;
+}
+
+.tile:not(:last-child) {
+    margin-right: 10px;
+}
+
+.icon {
+    display: inline-flex;
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon.with-bg {
+    background-color: #ff9800;
+}
+
+.icon.with-icon {
+    background-image: url("https://cdn2.iconfinder.com/data/icons/avatars-60/5985/34-Father-512.png");
+}
+
+.repeat-back {
+    margin: 0;
+}
+
+.container {
+    max-width: 960px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tile-set2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 40px;
+    margin-left: -40px;
+    margin-top: -40px;
+}
+
+.tile2 {
+    position: relative;
+    margin-left: 40px;
+    margin-top: 40px;
+    height: 120px;
+    flex-basis: calc(100% / 2 - 40px);
+    border: 2px dashed #2a2a2a;
+    border-radius: 4px;
+    background-color: #fff;
+
+    background-image: url("https://cdn0.iconfinder.com/data/icons/essentials-volume-6/128/apple-512.png");
+    background-size: 40px;
+}
+
+.tile2::before {
+    position: absolute;
+    top: -32px;
+    width: 100%;
+    content: "";
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+
+.no-repeat {
+    background-repeat: no-repeat;
+}
+
+.no-repeat::before {
+    content: "no-repeat";
+    font-family: monospace;
+}
+
+.repeat-x {
+    background-repeat: repeat-x;
+}
+
+.repeat-x::before {
+    content: "repeat-x";
+    font-family: monospace;
+}
+
+.repeat-y {
+    background-repeat: repeat-y;
+}
+
+.repeat-y::before {
+    content: "repeat-y";
+    font-family: monospace;
+}
+
+.repeat {
+    background-repeat: repeat;
+}
+
+.repeat::before {
+    content: "repeat";
+    font-family: monospace;
+}
+
+.attachment-back {
+    margin: 20px 0px 0px 0px;
+}
+
+.container2 {
+    padding: 40px;
+    background-image: url("https://cdn.pixabay.com/photo/2020/10/07/10/51/mountains-5634817_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /*  Comment out this line  */
+    background-attachment: fixed;
+}
+
+.box {
+    height: 300px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+}
+
+.box:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.box:nth-child(1) {
+    background-color: #2196f3;
+}
+
+.box:nth-child(2) {
+    background-color: #4caf50;
+}
+
+.box:nth-child(3) {
+    background-color: #ff9800;
+}
+
+.box:nth-child(4) {
+    background-color: #e91e63;
+}
+
+.canvas {
+    margin-top: 20px;
+    max-width: 1000px;
+    height: 400px;
+
+    background-image: url("https://cdn-icons-png.flaticon.com/512/361/361678.png"),
+        url("https://cdn-icons-png.flaticon.com/512/4206/4206277.png"),
+        url("https://cdn-icons-png.flaticon.com/512/814/814513.png"), url('https://tlgrm.ru/_/stickers/e3a/876/e3a87689-707f-3495-b94a-8ee96e2538e5/256/61.webp'),
+        url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg");
+
+    background-size: 80px, 100px, 150px, 130px, cover;
+    background-repeat: no-repeat;
+    background-position: top 120px right 130px, top 270px left 130px, center, 100px 60px,
+        center;
+}
+
+.base {
+    width: 480px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.base>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 2px dashed #2a2a2a;
+    border-radius: 4px;
+}
+
+.container3 {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-set {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+.card {
+    margin: 20px 0 0 20px;
+    flex-basis: calc(100% / 2 - 20px);
+}
+
+.card,
+.base {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.card>.label,
+.base>.label {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.card>.label {
+    font-family: monospace;
+    letter-spacing: -0.05em;
+}
+
+.thumb {
+    position: relative;
+    height: 380px;
+    width: 100%;
+    border: 2px dashed #2a2a2a;
+    border-radius: 4px;
+}
+
+.thumb>img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.card:nth-child(1) img {
+    object-fit: fill;
+}
+
+.card:nth-child(2) img {
+    object-fit: contain;
+}
+
+.card:nth-child(3) img {
+    object-fit: cover;
+}
+
+.card:nth-child(4) img {
+    object-fit: scale-down;
+}
+
+.card:nth-child(5) img {
+    object-fit: none;
+}
+
+.list {
+    padding: 20px;
+    margin: 0;
+    list-style: none;
+}
+
+.list-item:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.list-link {
+    display: inline-flex;
+    align-items: center;
+    color: currentColor;
+    text-decoration: none;
+    font-size: 32px;
+}
+
+.list-link::before,
+.list-link::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+}
+
+/* Adds a fire icon in front of the link text */
+.list-link::before {
+    margin-right: 16px;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/599/599502.png");
+}
+
+/* Adds and hides arrow icon after the link text */
+.list-link::after {
+    display: none;
+    margin-left: 16px;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/507/507257.png")
+}
+
+.list-link:hover {
+    color: #2196f3;
+}
+
+/* Show arrow icon on hover */
+.list-link:hover::after {
+    display: block;
+}
+
+.tile-set3 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tile3 {
+    height: 200px;
+    flex-basis: calc(50% - 10px);
+    margin: 5px;
+    border-radius: 4px;
+    background-color: #9e9e9e;
+
+    text-align: center;
+    line-height: 200px;
+    color: #fff;
+    font-family: monospace;
+    font-size: 24px;
+    letter-spacing: -0.05em;
+
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.tile3:nth-child(1) {
+    background-image: linear-gradient(to bottom,
+            var(--start-color),
+            var(--end-color));
+}
+
+.tile3:nth-child(2) {
+    background-image: linear-gradient(to top,
+            var(--start-color),
+            var(--end-color));
+}
+
+.tile3:nth-child(3) {
+    background-image: linear-gradient(to right,
+            var(--start-color),
+            var(--end-color));
+}
+
+.tile3:nth-child(4) {
+    background-image: linear-gradient(to top left,
+            var(--start-color),
+            var(--end-color));
+}
+
+.breakpoints {
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(to right,
+            #f44336 15%,
+            #09792b 40%,
+            #00b9ff 65%,
+            #ffb800);
+
+}
